@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelector('.start');
-
-   
+    var btn = document.querySelector('.restart');
 
     const grid = document.querySelector('.screen')
     const doodler = document.createElement('div')
@@ -181,7 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
       }
       grid.innerHTML = score;
-      buttons.style.display = 'block';
+      
+        
       clearInterval(upTimerId)
       clearInterval(downTimerId)
       clearInterval(leftTimerId)
@@ -205,4 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
         buttons.style.display = 'none';
     start()
 })
+
+btn.addEventListener('click',function(){
+    window.location.reload();
+})
+
   })
